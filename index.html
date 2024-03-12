@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Avançada</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <script type="module" src="/js/index.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -13,11 +13,24 @@
             <h1>Calculadora Plus</h1>
             <input type="number" placeholder="Digite um numero" id="input1">
             <input type="number" placeholder="Digite um numero" id="input2">
-            <div class="button">
-                <input type="button" value="+">
+            <div class="cont-bt">
+                <button onclick="calc('+')">+</button>
+                <button onclick="calc('-')">-</button>
+                <button onclick="calc('*')">*</button>
+                <button onclick="calc('/')">/</button>
+                <button onclick="apagar()">c</button>
             </div>
-            <input readonly id="">
+            <input type="text" readonly id="output">
         </div>
+        <div class = "header_history">
+            <h1>History: </h1>
+            <p>15 ultimas operações: </p>
+            <div id="history">
+            </div>
+        </div>
+        
     </div>
+
+    <script src="/js/index.js"></script>
 </body>
 </html>
